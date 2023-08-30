@@ -1,22 +1,23 @@
-import "./App.css";
+import './App.css'
+import AudioPlayer from './component/audioplayer/audioplayer'
+import MainNav from './component/mainnav/mainnav'
+import SideBar from './component/mainbar/mainbar'
+import CenterBlock from './component/centerblock/centerblock'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="#"
-          rel="noopener noreferrer"
-        >
-          Здесь скоро будет Skypro.Music
-        </a>
-      </header>
-    </div>
-  );
+      <div className="wrapper">
+        <div className="container">
+          <main className="main">
+            < MainNav />
+            < CenterBlock/>
+                <SideBar />
+          </main>
+          <AudioPlayer />
+          <footer className="footer" />
+        </div>
+      </div>
+  )
 }
 
-export default App;
+export default App
