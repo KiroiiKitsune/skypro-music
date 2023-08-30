@@ -1,8 +1,8 @@
 import './App.css'
-import AudioPlayer from './component/audioplayer'
-import MainNav from './component/mainnav'
-import SideBar from './component/mainbar'
-import CenterBlock from './component/centerblock'
+import AudioPlayer from './component/audioplayer/audioplayer'
+import MainNav from './component/mainnav/mainnav'
+import SideBar from './component/mainbar/mainbar'
+import CenterBlock from './component/centerblock/centerblock'
 
 function App() {
   return (

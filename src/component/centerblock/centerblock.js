@@ -1,6 +1,6 @@
 import './centerblock.css'
-import SearchPannel from './centerblock-search'
-import PlayList from './playlist'
+import SearchPannel from '../centerblock-search/centerblock-search'
+import PlayList from '../playlist/playlist'
 
 
 export default function CenterBlock() {
