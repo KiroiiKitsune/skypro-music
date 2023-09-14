@@ -47,7 +47,11 @@ export default function CenterBlockFilter() {
                 <div className="filter__block">
                   <ul className="filter__list_menu">
                     {authorList.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <a className="filter__text_list" href="#">
+                          {item}
+                        </a>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -72,7 +76,11 @@ export default function CenterBlockFilter() {
                 <div className="filter__block">
                   <ul className="filter__list_menu filter__list_menu_year">
                     {yearList.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <a className="filter__text_list" href="#">
+                          {item}
+                        </a>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -97,7 +105,11 @@ export default function CenterBlockFilter() {
                 <div className="filter__block">
                   <ul className="filter__list_menu">
                     {genreList.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <a className="filter__text_list" href="#">
+                          {item}
+                        </a>
+                      </li>
                     ))}
                   </ul>
                 </div>

@@ -71,11 +71,11 @@ body {
   cursor: pointer;
 }
 
-._btn-text:active {
+/* ._btn-text:active {
   border-color: #ad61ff;
   color: #ad61ff;
   cursor: pointer;
-}
+} */
 
 ._btn-icon:active svg {
   fill: transparent;
