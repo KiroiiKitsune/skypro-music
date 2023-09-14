@@ -75,7 +75,8 @@ export default function CenterBlockFilter() {
               <div className="filter__content_show filter__content_show_year">
                 <div className="filter__block">
                   <ul className="filter__list_menu filter__list_menu_year">
-                    {yearList.map((item) => (
+                    {yearList.sort((a, b) => a - b)
+              .map((item) => (
                       <li key={item}>
                         <a className="filter__text_list" href="#">
                           {item}
