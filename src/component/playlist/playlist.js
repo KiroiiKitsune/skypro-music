@@ -1,7 +1,7 @@
 import './playlist.css'
+
 import Track from '../track/track'
 import arrOfTracks from '../data'
-
 
 export default function PlayList() {
   return (
