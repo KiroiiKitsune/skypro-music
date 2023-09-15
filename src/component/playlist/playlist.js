@@ -8,6 +8,7 @@ export default function PlayList() {
     <div className="content__playlist playlist">
       {arrOfTracks.map((item) => (
         <Track
+          key={item.id }
           title={item.title}
           additionTitle={item.additionTitle}
           author={item.author}
