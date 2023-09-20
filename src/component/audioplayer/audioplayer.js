@@ -1,6 +1,9 @@
 import './audioplayer.css'
+import Skeleton from 'react-loading-skeleton'
 
-export default function AudioPlayer() {
+export default function AudioPlayer({loadSkel}) {
+
+
   return (
     <div className="bar">
       <div className="bar__content">
@@ -38,19 +41,19 @@ export default function AudioPlayer() {
             <div className="player__track-play track-play">
               <div className="track-play__contain">
                 <div className="track-play__image">
-                  <svg className="track-play__svg" alt="music">
+                {loadSkel ? (<Skeleton style={{width: '50px', height: '50px'}}/>) : (<svg className="track-play__svg" alt="music">
                     <use xlinkHref="img/icon/sprite.svg#icon-note" />
-                  </svg>
+                  </svg>)}
                 </div>
                 <div className="track-play__author">
-                  <a className="track-play__author-link" href="http://">
+                  {loadSkel ? (<Skeleton/>) : (<a className="track-play__author-link" href="http://">
                     Ты та...
-                  </a>
+                  </a>)}
                 </div>
                 <div className="track-play__album">
-                  <a className="track-play__album-link" href="http://">
+                {loadSkel? (<Skeleton/>) : (<a className="track-play__album-link" href="http://">
                     Баста
-                  </a>
+                  </a>)}
                 </div>
               </div>
 
