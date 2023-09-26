@@ -44,7 +44,7 @@ export const SidebarIcon = styled.svg `
 
 export const SidebarBlock= styled.div `
   height: 100%;
-  padding: 240px 0 0 0;
+  padding: 350px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,6 +68,7 @@ export const SidebarList = styled.div `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 30px;
 `
 
 export const SidebarItem = styled.div `

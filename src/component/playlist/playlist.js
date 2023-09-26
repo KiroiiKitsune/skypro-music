@@ -1,11 +1,13 @@
-import './playlist.css'
 
+import * as S from './playlist.style'
 import Track from '../track/track'
 import arrOfTracks from '../data'
 
+
+
 export default function PlayList() {
   return (
-    <div className="content__playlist playlist">
+    <S.ContentPlayList >
       {arrOfTracks.map((item) => (
         <Track
           key={item.id }
@@ -16,6 +18,6 @@ export default function PlayList() {
           time={item.time}
         />
       ))}
-    </div>
+    </S.ContentPlayList>
   )
 }
