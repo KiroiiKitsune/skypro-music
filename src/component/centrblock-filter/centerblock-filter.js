@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import './centerblock-filter.css'
+import * as S from './centerblock-filter.styled'
 import arrOfTracks from '../data'
+
+
 
 export default function CenterBlockFilter() {
   const authorList = [...new Set(arrOfTracks.map((item) => item.author))]
@@ -30,95 +32,87 @@ export default function CenterBlockFilter() {
   }
 
   return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
-      <div className="filter__list">
-        <button
-          className="filter__button button-author _btn-text _btn__text_active"
-          onClick={toggleAuthor}
-        >
+    <S.CenterBlockFilters>
+      <S.FilterTitle>Искать по:</S.FilterTitle>
+      <S.FilterList>
+        <S.FilterButton as={isAuthorOpen && S.BtnTextActive} onClick={toggleAuthor}>
           исполнителю
-        </button>
+        </S.FilterButton>
 
-        <div>
+        <S.FilterBox>
           {isAuthorOpen && (
-            <div className="filter__counter">
-              <div className="filter__content_show">
-                <div className="filter__block">
-                  <ul className="filter__list_menu">
+            <S.FilterCounter>
+              <S.FilterContent $isAuthorOpen={isAuthorOpen}>
+                <S.FilterBlock>
+                  <S.FilterListMenu>
                     {authorList.map((item) => (
-                      <li key={item}>
-                        <a className="filter__text_list" href="#">
+                      <S.FilterListItem key={item}>
+                        <S.FilterListLink href="#">
                           {item}
-                        </a>
-                      </li>
+                        </S.FilterListLink>
+                      </S.FilterListItem>
                     ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  </S.FilterListMenu>
+                </S.FilterBlock>
+              </S.FilterContent>
+            </S.FilterCounter>
           )}
-        </div>
-      </div>
+        </S.FilterBox>
+      </S.FilterList>
 
-      <div className="filter__list">
-        <button
-          className="filter__button button-year _btn-text"
-          onClick={toggleYear}
-        >
+      <S.FilterList>
+        <S.FilterButton as={isYearOpen && S.BtnTextActive} onClick={toggleYear}>
           году выпуска
-        </button>
+        </S.FilterButton>
 
-        <div>
+        <S.FilterBox>
           {isYearOpen && (
-            <div className="filter__counter">
-              <div className="filter__content_show filter__content_show_year">
-                <div className="filter__block">
-                  <ul className="filter__list_menu filter__list_menu_year">
-                    {yearList.sort((a, b) => a - b)
-              .map((item) => (
-                      <li key={item}>
-                        <a className="filter__text_list" href="#">
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <S.FilterCounter>
+              <S.FilterContentYear $isYearOpen={isYearOpen}>
+                <S.FilterBlock>
+                  <S.FilterListYear>
+                    {yearList
+                      .sort((a, b) => a - b)
+                      .map((item) => (
+                        <S.FilterListItem key={item}>
+                          <S.FilterListLink href="#">
+                            {item}
+                          </S.FilterListLink>
+                        </S.FilterListItem>
+                      ))}
+                  </S.FilterListYear>
+                </S.FilterBlock>
+              </S.FilterContentYear>
+            </S.FilterCounter>
           )}
-        </div>
-      </div>
+        </S.FilterBox>
+      </S.FilterList>
 
-      <div className="filter__list">
-        <button
-          className="filter__button button-genre _btn-text"
-          onClick={toggleGenre}
-        >
+      <S.FilterList>
+        <S.FilterButton as={isGenreOpen && S.BtnTextActive} onClick={toggleGenre}>
           жанру
-        </button>
+        </S.FilterButton>
 
-        <div>
+        <S.FilterBox>
           {isGenreOpen && (
-            <div className="filter__counter">
-              <div className="filter__content_show">
-                <div className="filter__block">
-                  <ul className="filter__list_menu">
+            <S.FilterCounter>
+              <S.FilterContentGenre $isGenreOpen={isGenreOpen}>
+                <S.FilterBlock>
+                  <S.FilterListMenu>
                     {genreList.map((item) => (
-                      <li key={item}>
-                        <a className="filter__text_list" href="#">
+                      <S.FilterListItem key={item}>
+                        <S.FilterListLink href="#">
                           {item}
-                        </a>
-                      </li>
+                        </S.FilterListLink>
+                      </S.FilterListItem>
                     ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  </S.FilterListMenu>
+                </S.FilterBlock>
+              </S.FilterContentGenre>
+            </S.FilterCounter>
           )}
-        </div>
-      </div>
-    </div>
+        </S.FilterBox>
+      </S.FilterList>
+    </S.CenterBlockFilters>
   )
 }

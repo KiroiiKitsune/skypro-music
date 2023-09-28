@@ -1,10 +1,13 @@
-import './App.css'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { useState, useEffect } from 'react'
+import { GlobalStyle } from './Global.style'
+import * as S from './App.style'
 import AudioPlayer from './component/audioplayer/audioplayer'
 import MainNav from './component/mainnav/mainnav'
 import SideBar from './component/mainbar/mainbar'
 import CenterBlock from './component/centerblock/centerblock'
+
+
 
 function App() {
 
@@ -17,19 +20,22 @@ function App() {
   }, []);
   
   return (
-    <div className="wrapper">
+    <>
+    <GlobalStyle />
+    <S.Wrapper>
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
-        <div className="container">
-          <main className="main">
+        <S.Container>
+          <S.Main>
             <MainNav />
             <CenterBlock />
             <SideBar load={isLoading}/>
-          </main>
+          </S.Main>
           <AudioPlayer loadSkel={isLoading}/>
-          <footer className="footer" />
-        </div>
+          <S.Footer/>
+        </S.Container>
       </SkeletonTheme>
-    </div>
+    </S.Wrapper>
+    </>
   )
 }
 

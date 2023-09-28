@@ -1,42 +1,47 @@
+
 import { useState } from 'react'
-import './mainnav.css'
+import * as S from './mainnav.styled'
+
+
+
+// const S. = S..
 
 export default function MainNav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="main__nav nav">
-      <div className="nav__logo logo">
-        <img className="logo__image" src="img/logo.png" alt="logo" />
-      </div>
+    <S.MainNav>
+      <S.NavLogo>
+        <S.LogoImg src="img/logo.png" alt="logo" />
+      </S.NavLogo>
       {/* не пойму почему ругается но все работает */}
-      <button className="nav__burger burger" onClick={() => setOpen(!open)}>
-        <span className="burger__line" />
-        <span className="burger__line" />
-        <span className="burger__line" />
-      </button>
+      <S.NavBurger onClick={() => setOpen(!open)}>
+        <S.BurgerLine />
+        <S.BurgerLine />
+        <S.BurgerLine />
+      </S.NavBurger>
 
       {open ? (
-        <div className="nav__menu menu">
-          <ul className="menu__list">
-            <li className="menu__item">
-              <a href="/#" className="menu__link">
+        <S.NavMenu>
+          <S.MenuList>
+            <S.MenuItem>
+              <S.MenuLink href="/#" >
                 Главное
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="/#" className="menu__link">
+              </S.MenuLink>
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.MenuLink href="/#" >
                 Мой плейлист
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="../signin.html" className="menu__link">
+              </S.MenuLink>
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.MenuLink href="../signin.html">
                 Войти
-              </a>
-            </li>
-          </ul>
-        </div>
+              </S.MenuLink>
+            </S.MenuItem>
+          </S.MenuList>
+        </S.NavMenu>
       ) : null}
-    </nav>
+    </S.MainNav>
   )
 }
