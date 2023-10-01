@@ -6,7 +6,7 @@ import * as S from './mainnav.styled'
 
 // const S. = S..
 
-export default function MainNav() {
+export default function MainNav({handleLogout}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -25,17 +25,17 @@ export default function MainNav() {
         <S.NavMenu>
           <S.MenuList>
             <S.MenuItem>
-              <S.MenuLink href="/#" >
+              <S.MenuLink to="/" >
                 Главное
               </S.MenuLink>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink href="/#" >
+              <S.MenuLink to="/favorites" >
                 Мой плейлист
               </S.MenuLink>
             </S.MenuItem>
-            <S.MenuItem>
-              <S.MenuLink href="../signin.html">
+            <S.MenuItem onClick={handleLogout}>
+              <S.MenuLink to="/signin">
                 Войти
               </S.MenuLink>
             </S.MenuItem>

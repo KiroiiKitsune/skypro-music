@@ -8,11 +8,11 @@ import CenterBlockFilter from '../centrblock-filter/centerblock-filter'
 
 
 
-export default function CenterBlock() {
+export default function CenterBlock(props) {
   return (
     <S.MainCenterBlock>
       <SearchPannel />
-      <S.CenterBlockH2>Треки</S.CenterBlockH2>
+      <S.CenterBlockH2>{props.plaListName}</S.CenterBlockH2>
       <CenterBlockFilter/>
       <S.CenterBlockContent>
         <S.ContentTitle>

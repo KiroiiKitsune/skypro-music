@@ -5,9 +5,9 @@ import MainNav from '../../component/mainnav/mainnav'
 import SideBar from '../../component/mainsidebar/mainbar'
 import CenterBlock from '../../component/centerblock/centerblock'
 import * as S from '../../App.style'
-import arrOfAllTracks from '../../component/data'
+import { arrOfFavoriteTracks } from '../../component/data'
 
-export default function MainPage ({handleLogout}) {
+export default function FavoritePage () {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -22,9 +22,9 @@ export default function MainPage ({handleLogout}) {
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
           <S.Container>
             <S.Main>
-              <MainNav handleLogout={handleLogout} />
-              <CenterBlock isFilterVisible playListName = 'Треки' arrOfTracks = {arrOfAllTracks}/>
-              <SideBar load={isLoading } isSidebarCatVisible/>
+              <MainNav/>
+              <CenterBlock isFilterVisible = {false} playListName = 'Мои треки' arrOfTracks = {arrOfFavoriteTracks}/>
+              <SideBar load={isLoading} isSidebarCatVisible = {false}/>
             </S.Main>
             <AudioPlayer loadSkel={isLoading}/>
             <S.Footer/>
@@ -34,4 +34,3 @@ export default function MainPage ({handleLogout}) {
       )
  
   }
-

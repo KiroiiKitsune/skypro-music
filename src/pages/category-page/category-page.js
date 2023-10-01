@@ -1,13 +1,15 @@
 import { SkeletonTheme } from 'react-loading-skeleton'
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import AudioPlayer from '../../component/audioplayer/audioplayer'
 import MainNav from '../../component/mainnav/mainnav'
 import SideBar from '../../component/mainsidebar/mainbar'
 import CenterBlock from '../../component/centerblock/centerblock'
 import * as S from '../../App.style'
-import arrOfAllTracks from '../../component/data'
+import { arrOfSelection } from '../../component/data'
 
-export default function MainPage ({handleLogout}) {
+
+export default function Category () {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -15,6 +17,10 @@ export default function MainPage ({handleLogout}) {
         setIsLoading(false);
       }, 5000);
     }, []);
+
+
+    const params = useParams(); 
+    const playlistArr = arrOfSelection.find((item) => item.id === Number(params.id));
     
     return (
   
@@ -22,9 +28,9 @@ export default function MainPage ({handleLogout}) {
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
           <S.Container>
             <S.Main>
-              <MainNav handleLogout={handleLogout} />
-              <CenterBlock isFilterVisible playListName = 'Треки' arrOfTracks = {arrOfAllTracks}/>
-              <SideBar load={isLoading } isSidebarCatVisible/>
+              <MainNav/>
+              <CenterBlock isFilterVisible = {false} playListName = {playlistArr.name} arrOfTracks = {playlistArr.items}/>
+              <SideBar load={isLoading} isSidebarCatVisible = {false}/>
             </S.Main>
             <AudioPlayer loadSkel={isLoading}/>
             <S.Footer/>
@@ -34,4 +40,3 @@ export default function MainPage ({handleLogout}) {
       )
  
   }
-
