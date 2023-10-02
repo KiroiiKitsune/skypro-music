@@ -37,8 +37,8 @@ function App() {
   
   return (
     <>
-    <GlobalStyle user={localStorage.getItem('user')} handleLogin={handleLogin} handleLogout={handleLogout}/>
-      <AppRouters/>
+    <GlobalStyle />
+      <AppRouters user={localStorage.getItem('user')} handleLogin={handleLogin} handleLogout={handleLogout}/>
     </>
   )
 }

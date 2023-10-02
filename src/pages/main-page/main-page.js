@@ -5,7 +5,7 @@ import MainNav from '../../component/mainnav/mainnav'
 import SideBar from '../../component/mainsidebar/mainbar'
 import CenterBlock from '../../component/centerblock/centerblock'
 import * as S from '../../App.style'
-import arrOfAllTracks from '../../component/data'
+import {arrOfAllTracks} from '../../component/data'
 
 export default function MainPage ({handleLogout}) {
     const [isLoading, setIsLoading] = useState(true);

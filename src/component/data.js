@@ -1,4 +1,4 @@
-const arrOfAllTracks = [
+export const arrOfAllTracks = [
   {
    
     title: 'Guilt',
@@ -83,7 +83,6 @@ const arrOfAllTracks = [
     genre: 'Техно'
   },
   {
-    id: 10,
     title: 'Morena',
     author: 'Tom Boxer',
     album: 'Soundz Made in Romania',
@@ -204,4 +203,5 @@ export const arrOfSelection = [
   },
 ]
 
-export default arrOfAllTracks 
+
+

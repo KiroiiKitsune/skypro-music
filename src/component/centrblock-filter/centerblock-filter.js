@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import * as S from './centerblock-filter.styled'
-import arrOfTracks from '../data'
+import {arrOfAllTracks} from '../data'
 
 
 
 export default function CenterBlockFilter() {
-  const authorList = [...new Set(arrOfTracks.map((item) => item.author))]
-  const yearList = [...new Set(arrOfTracks.map((item) => item.year))]
-  const genreList = [...new Set(arrOfTracks.map((item) => item.genre))]
+  const authorList = [...new Set(arrOfAllTracks.map((item) => item.author))]
+  const yearList = [...new Set(arrOfAllTracks.map((item) => item.year))]
+  const genreList = [...new Set(arrOfAllTracks.map((item) => item.genre))]
 
   const [isAuthorOpen, setIsAuthorOpen] = useState(false)
   const [isYearOpen, setIsYearOpen] = useState(false)

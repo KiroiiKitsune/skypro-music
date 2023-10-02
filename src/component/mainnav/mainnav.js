@@ -9,6 +9,9 @@ import * as S from './mainnav.styled'
 export default function MainNav({handleLogout}) {
   const [open, setOpen] = useState(false)
 
+
+
+
   return (
     <S.MainNav>
       <S.NavLogo>

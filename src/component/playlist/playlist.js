@@ -1,15 +1,16 @@
 
 import * as S from './playlist.style'
 import Track from '../track/track'
+import { arrOfAllTracks } from '../data'
 
 
 
-
-export default function PlayList(prop) {
+export default function PlayList() {
   return (
     <S.ContentPlayList >
-      {prop.arrOfTracks.map((item) => (
+      {arrOfAllTracks.map((item) => (
         <Track
+          key={item.id}
           title={item.title}
           additionTitle={item.additionTitle}
           author={item.author}
