@@ -4,8 +4,6 @@ import * as S from './mainnav.styled'
 
 
 
-// const S. = S..
-
 export default function MainNav({handleLogout}) {
   const [open, setOpen] = useState(false)
 

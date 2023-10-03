@@ -30,7 +30,7 @@ export default function CenterBlock(props) {
             </S.PlaylisTitleSvg>
           </S.Col04>
         </S.ContentTitle>
-        <PlayList/>
+        <PlayList arrOfTracks = {props.arrOfTracks}/>
       </S.CenterBlockContent>
     </S.MainCenterBlock>
   )
