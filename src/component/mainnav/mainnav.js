@@ -13,7 +13,7 @@ export default function MainNav({handleLogout}) {
   return (
     <S.MainNav>
       <S.NavLogo>
-        <S.LogoImg src="img/logo.png" alt="logo" />
+        <S.LogoImg src="../img/logo.png" alt="logo" />
       </S.NavLogo>
       {/* не пойму почему ругается но все работает */}
       <S.NavBurger onClick={() => setOpen(!open)}>
