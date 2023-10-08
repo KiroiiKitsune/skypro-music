@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -44,7 +44,7 @@ export const SidebarIcon = styled.svg `
 
 export const SidebarBlock= styled.div `
   height: 100%;
-  padding: 350px 0 0 0;
+  padding: 180px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +83,7 @@ export const SidebarItem = styled.div `
 //   margin-bottom: 30px;
 // `
 
-export const SidebarLink = styled.a `
+export const SidebarLink = styled(Link) `
   width: 100%;
   height: 100%;
 `

@@ -7,7 +7,7 @@ import * as S from './track.styled'
 
 
 
-export default function Track (prop) {
+export default function Track (props) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -34,11 +34,11 @@ export default function Track (prop) {
               <Skeleton style={{ width: '356px' }} />
             ) : (
               <S.TrackTitleLink href="http://">
-                {prop.title}
-                {prop.additionTitle && (
+                {props.title}
+                {props.additionTitle && (
                   <S.TrackTitleSpan>
                     {' '}
-                    {prop.additionTitle}
+                    {props.additionTitle}
                   </S.TrackTitleSpan>
                 )}
               </S.TrackTitleLink>
@@ -50,7 +50,7 @@ export default function Track (prop) {
             <Skeleton style={{ width: '271px' }} />
           ) : (
             <S.TrackAuthorLink href="http://">
-              {prop.author}
+              {props.author}
             </S.TrackAuthorLink>
           )}
         </S.TrackAuthor>
@@ -59,7 +59,7 @@ export default function Track (prop) {
             <Skeleton style={{ width: '230px' }} />
           ) : (
             <S.TrackAlbumLink href="http://">
-              {prop.album}
+              {props.album}
             </S.TrackAlbumLink>
           )}
         </S.TrackAlbum>
@@ -70,7 +70,7 @@ export default function Track (prop) {
           {isLoading ? (
             <Skeleton style={{ width: '20px' }} />
           ) : (
-            <S.TrackTimerText>{prop.time}</S.TrackTimerText>
+            <S.TrackTimerText>{props.time}</S.TrackTimerText>
           )}
         </S.TrackTimer>
       </S.PlayListTrack>

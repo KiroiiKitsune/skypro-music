@@ -3,7 +3,7 @@ import * as S from './mainbar.style'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
-export default function SideBar({load}) {
+export default function SideBar({load, isSidebarCatVisible}) {
  
 
  
@@ -18,10 +18,11 @@ export default function SideBar({load}) {
           </svg>
         </S.SidebarIcon>
       </S.SidebarPersona>
+      {isSidebarCatVisible &&
       <S.SidebarBlock> 
         <S.SidebarList>
           <S.SidebarItem> 
-            <S.SidebarLink  href="/#">
+            <S.SidebarLink  to="/category/1">
               {load ? (<Skeleton style={{ height: '150px' }}/>) : (<S.SidebarImg
                 src="img/playlist01.png"
                 alt="day's playlist" 
@@ -29,7 +30,7 @@ export default function SideBar({load}) {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="/#">
+            <S.SidebarLink to="/category/2">
               {load ? (<Skeleton style={{ height: '150px' }}/> ):(<S.SidebarImg
                 src="img/playlist02.png"
                 alt="day's playlist"
@@ -37,7 +38,7 @@ export default function SideBar({load}) {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="/#">
+            <S.SidebarLink to="/category/3">
             {load ? (<Skeleton style={{ height: '150px' }}/> ):(<S.SidebarImg
                 src="img/playlist03.png"
                 alt="day's playlist"
@@ -45,7 +46,7 @@ export default function SideBar({load}) {
             </S.SidebarLink>
           </S.SidebarItem>
         </S.SidebarList>
-      </S.SidebarBlock>
+      </S.SidebarBlock>}
     </S.MainSidebar>
   )
 }
