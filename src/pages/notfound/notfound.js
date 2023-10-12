@@ -1,9 +1,9 @@
 
-import AudioPlayer from '../../components/audioplayer/audioplayer';
-import CenterBlockNF from '../../components/centerblocknf/centerblocknf';
-import NavMenuNF from '../../components/navmenunf/navmenunf';
-import SideBarNF from '../../components/sidebarnf/sidebarnf';
-import * as S from '../../components/styledApp/styled.app'
+import AudioPlayer from '../../component/audioplayer/audioplayer';
+import CenterBlockNF from '../../component/centerblockNF/center-block-nf';
+import NavMenuNF from '../../component/mainsidebarNf/mainsidebarnf';
+import SideBarNF from '../../component/mainnavNf/main-navNf';
+import * as S from '../../App.style'
 
 export default function NotFoundPage() {
     
