@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -10,8 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <App />
-    </BrowserRouter>
+    </BrowserRouter> 
   </React.StrictMode>
 );
-
 
