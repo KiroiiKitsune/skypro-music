@@ -1,8 +1,8 @@
-import { LoginPageComponent } from "../login-page/loginpage";
+import {LoginPageComp} from '../loginpage/loginpage';
 
 
 export default function SignupPage() {
-    return (
-      <LoginPageComponent isRegistredMode/>
-    );
+      return (
+        <LoginPageComp isRegistredMode/>
+      );
 }
