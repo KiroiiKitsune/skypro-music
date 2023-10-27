@@ -47,7 +47,7 @@ export const CenterBlockContent = styled.div`
   overflow-y: auto;
   &::-webkit-scrollbar {
     width: 4px;
-  };
+  }
 `
 
 export const FilterTitle = styled.div`
@@ -73,6 +73,7 @@ export const ContentTitle = styled.div`
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 24px;
+  margin-right: 15px;
 `
 
 const ContentTitleColMixin = css`

@@ -9,4 +9,5 @@ export const ContentPlaylist = styled.ul`
   -ms-flex-direction: column;
   flex-direction: column;
   overflow-y: auto;
+  padding-right: 20px;
 `
