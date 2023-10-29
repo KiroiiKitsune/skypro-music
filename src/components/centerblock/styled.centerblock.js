@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 // { css,keyframes }
 
 export const MainCenterblock = styled.div`
-  height: 100vh;
+  height: 75vh;
   width: auto;
   -webkit-box-flex: 3;
   -ms-flex-positive: 3;
