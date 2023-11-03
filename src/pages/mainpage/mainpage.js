@@ -10,6 +10,8 @@ export default function MainPage({
   tracks,
   isTracksLoading,
   LoadTracksError,
+  selection,
+  LoadSelectionError,
 }) {
   const [currentTrack, setCurrentTrack] = useState(null) //  Стейт для выбора трека и активации аудиоплеера
   return (
@@ -25,7 +27,11 @@ export default function MainPage({
             LoadTracksError={LoadTracksError}
             setCurrentTrack={setCurrentTrack}
           />
-          <SideBar unvisible={isTracksLoading} isSidebarCatVisible />
+          <SideBar
+            unvisible={isTracksLoading}
+            isSidebarCatVisible={!LoadSelectionError}
+            selection={selection}
+          />
         </S.Main>
         {currentTrack && (
           <AudioPlayer

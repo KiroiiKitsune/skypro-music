@@ -14,6 +14,8 @@ export default function AppRoutes({
   tracks,
   isTracksLoading,
   LoadTracksError,
+  selection,
+  LoadSelectionError,
 }) {
   return (
     <Routes>
@@ -29,6 +31,8 @@ export default function AppRoutes({
               tracks={tracks}
               isTracksLoading={isTracksLoading}
               LoadTracksError={LoadTracksError}
+              selection={selection}
+              LoadSelectionError={LoadSelectionError}
             />
           }
         />
